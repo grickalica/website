@@ -150,12 +150,16 @@ h6 {
   z-index: 997;
 }
 
+.navmenu {
+  margin-right: 1em;
+}
+
 .header .logo {
   line-height: 1;
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 56px;
   margin-right: 8px;
 }
 
@@ -235,6 +239,7 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    margin-right: 3em;
   }
 
   .navmenu ul {
@@ -272,7 +277,7 @@ h6 {
   }
 
   .navmenu li:last-child a {
-    padding-right: 0;
+    /* padding-right: 0; */
   }
 
   .navmenu li:hover>a,
@@ -469,8 +474,8 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #ffffff;
+  background-color: #292929;
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -490,7 +495,7 @@ h6 {
 }
 
 .footer .footer-about .logo span {
-  color: var(--heading-color);
+  color: #ffffff;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -509,9 +514,11 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  /* border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%); */
+  border: 1px solid #ffffff;
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 50%); */
+  color: #ffffff;
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -526,6 +533,7 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  color: #ffffff;
 }
 
 .footer .footer-links {
@@ -555,7 +563,8 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 20%); */
+  color: #ffffff;
   display: inline-block;
   line-height: 1;
 }
@@ -842,6 +851,56 @@ section,
 
 .hero .sign-up-form input[type=submit]:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
+}
+
+.hero .hero-btn {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin: 20px 10px 10px 0;
+  border: 2px solid var(--contrast-color);
+  color: var(--contrast-color);
+}
+
+.hero .hero-btn:hover {
+  background: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.hero .read-more {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .read-more i {
+  font-size: 18px;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.hero .read-more:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  padding-right: 19px;
+}
+
+.hero .read-more:hover i {
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
@@ -1702,6 +1761,37 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+.call-to-action .read-more {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-to-action .read-more i {
+  font-size: 18px;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.call-to-action .read-more:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  padding-right: 19px;
+}
+
+.call-to-action .read-more:hover i {
+  margin-left: 10px;
+}
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1941,6 +2031,37 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.contact .read-more {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .read-more i {
+  font-size: 18px;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.contact .read-more:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  padding-right: 19px;
+}
+
+.contact .read-more:hover i {
+  margin-left: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -2208,7 +2329,7 @@ section,
 .service-details .help-box {
   background-color: var(--accent-color);
   color: var(--contrast-color);
-  margin-top: 30px;
+  /* margin-top: 30px; */
   padding: 30px 15px;
 }
 
@@ -2219,6 +2340,10 @@ section,
 .service-details .help-box h4,
 .service-details .help-box a {
   color: var(--contrast-color);
+}
+
+.service-details .help-box a {
+  font-size: 1.1em;
 }
 
 .service-details .services-img {
