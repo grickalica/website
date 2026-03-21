@@ -17,10 +17,20 @@
     const selectHeader = document.querySelector('#header');
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+
+    const logo = document.getElementById('logo');
+    if (logo != null) {
+      if (window.scrollY > 100) {
+        logo.src = 'assets/img/logo.png';
+      } else {
+        logo.src = 'assets/img/logo-white.png';
+      }
+    }
   }
 
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
+  window.addEventListener('load', initStats);
 
   /**
    * Mobile nav toggle
@@ -108,11 +118,6 @@
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
 
   /**
    * Init isotope layout and filters
@@ -216,3 +221,19 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+function initStats() {
+  // $.getJSON("https://app.aintissue.com/stats.json", function(data) {
+  //   console.log(data);
+
+  //   $("#users").attr("data-purecounter-end", data.users);
+  //   $("#projects").attr("data-purecounter-end", data.projects);
+  //   $("#messages").attr("data-purecounter-end", data.messages);
+  //   $("#bots").attr("data-purecounter-end", data.bots);
+
+  //     /**
+  //    * Initiate Pure Counter
+  //    */
+  //   new PureCounter();
+  // });
+}
