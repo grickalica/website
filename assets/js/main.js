@@ -21,9 +21,9 @@
     const logo = document.getElementById('logo');
     if (logo != null) {
       if (window.scrollY > 100) {
-        logo.src = 'assets/img/logo.png?v=1';
+        logo.src = 'assets/img/logo.png?v=2';
       } else {
-        logo.src = 'assets/img/logo-white.png?v=1';
+        logo.src = 'assets/img/logo-white.png?v=2';
       }
     }
   }
